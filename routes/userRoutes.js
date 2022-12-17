@@ -1,7 +1,7 @@
 const { query } = require('express');
 var express = require('express');
 var router = express.Router();
-const {usersControlers}= require('../controllers')
+const usersControlers = require('../controllers')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -34,9 +34,7 @@ router.post('/adduser',async function(req, res, next){
   catch(error){
     res.status(500).send(error);
   }
-
 });
-
 
 
 module.exports = router;
